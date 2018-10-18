@@ -24,6 +24,15 @@ $(document).ready(function() {
         topSelector.classList.add("form-control-lg");
         topSelector.classList.add("top-select");
 
+        //build default value
+        var option = document.createElement("option");
+        option.classList.add("top-selector");
+        option.setAttribute("value", "selectProperty");
+        option.setAttribute("id", "selectProperty");
+        option.innerHTML = "Select a property...";
+
+        topSelector.appendChild(option);
+
         for (var x=0; x<array.length; x++) {
             var option = document.createElement("option");
             option.classList.add("top-selector");
