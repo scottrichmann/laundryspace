@@ -157,7 +157,7 @@ $(document).ready(function() {
     function roomBuilder(id) {
         //function to build the room using LV api, and make it pretty
 
-        $.get("https://crossorigin.me/https://api.laundryview.com/room/?api_key=8c31a4878805ea4fe690e48fddbfffe1&method=getAppliances&location=" + id).done(function (data) {
+        $.get("https://cors-anywhere.herokuapp.com/https://api.laundryview.com/room/?api_key=8c31a4878805ea4fe690e48fddbfffe1&method=getAppliances&location=" + id).done(function (data) {
 
             var datapoint = document.getElementById("roomData");
 
