@@ -650,7 +650,7 @@ $(document).ready(function() {
                 modal.setAttribute('tabindex', '-1');
                 modal.setAttribute('role', 'dialog');
                 modal.setAttribute('id','emailModal');
-                modal.innerHTML = "<div class='modal-dialog' role='document'><div class='modal-content'><div class='modal-header'><h5 class='modal-title'>Notify via email</h5><button type='button' class='close' data-dismiss='modal' aria-label='Close' id='removeModal'><span aria-hidden='true'>&times;</span></button></div><div class='modal-body'><p>" + machineName + " will finish it's cycle at <strong>" + readableTime +".</strong> Enter your email below to receive a notification.</p><input class='form-control form-control-lg' type='text' id='email' placeholder='Email'></div><div class='modal-footer'><button type='button' class='btn btn-primary' id='"+unixTimeEnd+"'>Notify Me</button><button type='button' class='btn btn-secondary' data-dismiss='modal' id='removeModal'>Close</button></div></div></div>";
+                modal.innerHTML = "<div class='modal-dialog' role='document'><div class='modal-content'><div class='modal-header'><h5 class='modal-title'>Notify via email</h5><button type='button' class='close' data-dismiss='modal' aria-label='Close' id='removeModal'><span aria-hidden='true'>&times;</span></button></div><div class='modal-body'><p>" + machineName + " will finish its cycle at <strong>" + readableTime +".</strong> Enter your email below to receive a notification.</p><input class='form-control form-control-lg' type='text' id='email' placeholder='Email'></div><div class='modal-footer'><button type='button' class='btn btn-primary' id='"+unixTimeEnd+"'>Notify Me</button><button type='button' class='btn btn-secondary' data-dismiss='modal' id='removeModal'>Close</button></div></div></div>";
                 
                 //add it to row
                 row.appendChild(modal);
@@ -729,7 +729,7 @@ $(document).ready(function() {
         var sendgridjs_url      = "https://laundryspacemail.herokuapp.com/send";
         var sendgridjs_to       = $("#email").val();
         var sendgridjs_subject  = nameOfMachine + " is ready for use!";
-        var sendgridjs_html     = "<p>Hey there! <br /> Looks like this machine is ready and it's cycle finished at " + timeEndReadable +". <br /><br /><strong>If you machine still isn't done, give it a few minutes. LaundryView tends to underestimate cycle times.</strong><br /><br /> <strong>Happy washing,<br /><a href='https://www.ulaundry.space'>LaundrySpace</a>,</strong><em> created by Scott Richman (UAlbany)</em></p>";
+        var sendgridjs_html     = "<p>Hey there! <br /> Looks like this machine is ready and its cycle finished at " + timeEndReadable +". <br /><br /><strong>If you machine still isn't done, give it a few minutes. LaundryView tends to underestimate cycle times.</strong><br /><br /> <strong>Happy washing,<br /><a href='https://www.ulaundry.space'>LaundrySpace</a>,</strong><em> created by Scott Richman (UAlbany)</em></p>";
         var sendgridjs_sendat   = parseInt(timeEndUnix);
 
         var email = {
