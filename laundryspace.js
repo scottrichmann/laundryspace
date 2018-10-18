@@ -725,7 +725,7 @@ $(document).ready(function() {
     };
 
     function sendEmail(nameOfMachine,timeEndUnix,timeEndReadable) {
-        var sendgridjs_url      = "http://laundryspacemail.herokuapp.com/send";
+        var sendgridjs_url      = "https://laundryspacemail.herokuapp.com/send";
         var sendgridjs_to       = $("#email").val();
         var sendgridjs_subject  = nameOfMachine + " is ready for use!";
         var sendgridjs_html     = "<p>Hey there! <br /> Looks like this machine is ready and it's cycle finished at " + timeEndReadable +". <br /><br /><strong>If you machine still isn't done, give it a few minutes. LaundryView tends to underestimate cycle times.</strong><br /><br /> <strong>Happy washing,<br /><a href='https://www.ulaundry.space'>LaundrySpace</a>,</strong><em> created by Scott Richman (UAlbany)</em></p>";
