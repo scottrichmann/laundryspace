@@ -42,7 +42,6 @@ $(document).ready(function() {
 
     //create listeners for the top ids
     $(".top-select").change(function() {
-        console.log($(".top-select").val());
         //first clear any lower levels if they are there
         $(".child-select").remove();
         $(".room-select").remove();
@@ -87,7 +86,6 @@ $(document).ready(function() {
         };
         //create listeners for the child ids
         $(".child-select").change(function() {
-            console.log($(".child-select").val());
 
             //first remove the room selector if it exists
             $(".room-select").remove();
@@ -98,8 +96,6 @@ $(document).ready(function() {
 
             //create listeners for the room ids
             $(".room-select").change(function() {
-                console.log($(".room-select").val());
-                console.log(!$.isNumeric($('.room-select').val()));
                 buildRoom($(".room-select").val());
             });
         });
@@ -113,7 +109,6 @@ $(document).ready(function() {
         var array = tempArray;
         if ($.isNumeric(id)) {
             //pass values to roomBuilder function
-            console.log("build room");
             roomBuilder(id);
         }else {
             for (var x=0; x<array.length; x++) {
@@ -154,7 +149,6 @@ $(document).ready(function() {
         //function to build the room using LV api, and make it pretty
 
         $.get("https://cors-escape.herokuapp.com/https://api.laundryview.com/room/?api_key=8c31a4878805ea4fe690e48fddbfffe1&method=getAppliances&location=" + id).done(function (data) {
-            console.log(data);
 
             var datapoint = document.getElementById("roomData");
 
@@ -202,7 +196,6 @@ $(document).ready(function() {
                 var type = $(appliances[i]).find('appliance_type').html();
                 var statusOfMachine = $(appliances[i]).find('status').html();
 
-                console.log(statusOfMachine);
                 if (type == "WASHER") {
                     //build washer machine cards
                     var washcard = document.createElement('div');
@@ -249,14 +242,12 @@ $(document).ready(function() {
                         secondCol.classList.add('col-md-6');
 
                         var time = remainder.match(/\d+/g).map(Number);
-                        console.log(time[0]);
 
                         //calculate the percent done
                         var avgTime = $(appliances[i]).find('avg_cycle_time').html();
                         avgTime = parseInt(avgTime);
                         var percent = time[0]*100/avgTime;
                         percent = 100 - percent;
-                        console.log(percent);
                         var percentHTML = '<div class="card-body"><div class="progress"><div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="' + percent + '" aria-valuemin="0" aria-valuemax="100" style="width: '+ percent +'%"></div></div></div>';
                         secondCol.innerHTML = percentHTML;
 
@@ -265,7 +256,6 @@ $(document).ready(function() {
 
                         //set text to reflect status
                         timeRemaining.innerHTML = time[0] + " minutes remaining"
-                        console.log(typeof(time[0]));
                         var computeDate = new Date();
                         computeDate.setMinutes(computeDate.getMinutes() + time[0]);
                         var hour = computeDate.getHours();
@@ -281,10 +271,8 @@ $(document).ready(function() {
                         if (minute < 10) {
                             minute = "0" + minute;
                         }
-                        console.log(hour +":"+ minute + " " + ampm);
                         
                         var unixTime = computeDate.getTime()/1000|0;
-                        console.log("unix time"+ unixTime);
 
                         var timeFinish = hour +":"+ minute + " " + ampm;
 
@@ -406,14 +394,12 @@ $(document).ready(function() {
                         secondCol.classList.add('col-md-6');
 
                         var time = remainder.match(/\d+/g).map(Number);
-                        console.log(time[0]);
 
                         //calculate the percent done
                         var avgTime = $(appliances[i]).find('avg_cycle_time').html();
                         avgTime = parseInt(avgTime);
                         var percent = time[0]*100/avgTime;
                         percent = 100 - percent;
-                        console.log(percent);
                         var percentHTML = '<div class="card-body"><div class="progress"><div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="' + percent + '" aria-valuemin="0" aria-valuemax="100" style="width: '+ percent +'%"></div></div></div>';
                         secondCol.innerHTML = percentHTML;
 
@@ -422,7 +408,6 @@ $(document).ready(function() {
 
                         //set text to reflect status
                         timeRemaining.innerHTML = time[0] + " minutes remaining"
-                        console.log(typeof(time[0]));
                         var computeDate = new Date();
                         computeDate.setMinutes(computeDate.getMinutes() + time[0]);
                         var hour = computeDate.getHours();
@@ -437,10 +422,8 @@ $(document).ready(function() {
                         if (minute < 10) {
                             minute = "0" + minute;
                         }
-                        console.log(hour +":"+ minute + " " + ampm);
 
                         var unixTime = computeDate.getTime()/1000|0;
-                        console.log("unix time"+ unixTime);
 
                         var timeFinish = hour +":"+ minute + " " + ampm;
 
@@ -647,8 +630,6 @@ $(document).ready(function() {
 
             //listener for notify me
             $('#notifyMe').on('click', function(e) {
-                console.log('clicked');
-                console.log(e);
                 var machineName = $(e.target).attr('machineName');
                 var unixTimeEnd = $(e.target).attr('remain');
                 var readableTime = $(e.target).attr('readable');
@@ -669,7 +650,6 @@ $(document).ready(function() {
 
                 //listener for Notify Me inside modal
                 $('#'+unixTimeEnd).on('click', function(){
-                    console.log('clicked');
                     //call the email function
                     sendEmail(machineName,unixTimeEnd,readableTime);
                     $('#emailModal').modal('hide');

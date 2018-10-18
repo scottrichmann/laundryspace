@@ -37,3 +37,12 @@
 .mx-auto {
     margin-bottom: 2rem;
 }
+.top-select {
+    padding-top: 5px;
+}
+.child-select {
+    padding-top: 5px;
+}
+.room-select {
+    padding-top: 5px;
+}
