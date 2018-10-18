@@ -1,0 +1,39 @@
+.washer-available {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+.washer-in-use {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+.washer-out-of-order {
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+.dryer-available {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+.dryer-in-use {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+.dryer-out-of-order {
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+.progress {
+    height: 5rem;
+}
+.card {
+    margin: 5px;
+}
+.washers-title {
+    padding-left: 5px;
+}
+.dryers-title {
+    padding-left: 5px;
+}
+.mx-auto {
+    margin-bottom: 2rem;
+}

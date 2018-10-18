@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>LaundrySpace</title>
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        <!-- Fontawesome webfonts -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    
+        <!-- Laundry space CSS -->
+        <link rel="stylesheet" href="laundryspace.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">LaundrySpace</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" id="currentSpace">Current Space</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="backToPriorSpace">Back to Homepage</a>
+                </li>
+                </ul>
+            </div>     
+        </nav>
+
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6" id="spaceLeft">
+                        <h1 class="display-4" id="spaceTitle">Laundry Space Viewer</h1>
+                        <p class="lead" id="locationSelect">Select your location.</p>
+                        <div id="selector"></div>
+                    </div>
+                    <div class="col-md-6" id="spaceRight">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="roomData"></div>
+    
+    
+    
+        <!-- javascript files -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+        <script src="laundryspace.js"></script>
+    </body>
+</html>

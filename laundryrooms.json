@@ -1,0 +1,429 @@
+{
+    "buildings":[
+        {
+        "propertyName": "State Quad",
+        "pid": "state",
+        "rooms": [
+            {
+            "roomName": "Anthony Hall",
+            "roomID": "4839845"
+            },
+            {
+            "roomName": "Cooper Hall",
+            "roomID": "4839844"
+            },
+            {
+            "roomName": "Fulton Hall",
+            "roomID": "4839846"
+            },
+            {
+            "roomName": "Irving Hall",
+            "roomID": "4839843"
+            },
+            {
+            "roomName": "Melville Hall",
+            "roomID": "melville",
+            "innerRooms": [
+                    {
+                    "roomName": "Basement",
+                    "roomID": "4839841"
+                    },
+                    {
+                    "roomName": "First Floor",
+                    "roomID": "4839867"
+                    }
+                ]
+            },
+            {
+            "roomName": "Steinmetz Hall",
+            "roomID": "steinmetz",
+            "innerRooms": [
+                    {
+                    "roomName": "Basement",
+                    "roomID": "4839840"
+                    },
+                    {
+                    "roomName": "First Floor",
+                    "roomID": "4839871"
+                    }
+                ]
+            },
+            {
+            "roomName": "Tappan Hall",
+            "roomID": "tappan",
+            "innerRooms": [
+                    {
+                    "roomName": "First Floor",
+                    "roomID": "4839839"
+                    },
+                    {
+                    "roomName": "Second Floor",
+                    "roomID": "4839866"
+                    },
+                    {
+                    "roomName": "Third Floor",
+                    "roomID": "4839868"
+                    }
+                ]
+            },
+            {
+            "roomName": "Whitman Hall",
+            "roomID": "whitman",
+            "innerRooms": [
+                    {
+                    "roomName": "Basement",
+                    "roomID": "4839824"
+                    },
+                    {
+                    "roomName": "First Floor",
+                    "roomID": "4839827"
+                    },
+                    {
+                    "roomName": "Second Floor",
+                    "roomID": "4839825"
+                    },
+                    {
+                    "roomName": "Third Floor",
+                    "roomID": "4839823"
+                    }
+                ]
+            },
+            {
+            "roomName": "Eastman Tower",
+            "roomID": "4839842"
+            }
+
+
+        ]
+        },
+
+        {
+            "propertyName": "Colonial Quad",
+            "pid": "colonial",
+            "rooms": [
+                {
+                "roomName": "Clinton Hall",
+                "roomID": "4839815"
+                },
+                {
+                "roomName": "Delancey Hall",
+                "roomID": "483987"
+                },
+                {
+                "roomName": "Hamilton Hall",
+                "roomID": "hamilton",
+                "innerRooms": [
+                        {
+                        "roomName": "Basement",
+                        "roomID": "4839816"
+                        },
+                        {
+                        "roomName": "First Floor",
+                        "roomID": "4839870"
+                        }
+                    ]
+                },
+                {
+                "roomName": "Herkimer Hall",
+                "roomID": "herkimer",
+                "innerRooms": [
+                        {
+                        "roomName": "First Floor",
+                        "roomID": "48398006"
+                        },
+                        {
+                        "roomName": "Second Floor",
+                        "roomID": "48398073"
+                        },
+                        {
+                        "roomName": "Third Floor",
+                        "roomID": "48398074"
+                        }
+                    ]
+                },
+                {
+                "roomName": "Johnson Hall",
+                "roomID": "483985"
+                },
+                {
+                "roomName": "Livingston Tower",
+                "roomID": "483984"
+                },
+                {
+                "roomName": "Morris Hall",
+                "roomID": "483983"
+                },
+                {
+                "roomName": "Paine Hall",
+                "roomID": "483982"
+                },
+                {
+                "roomName": "Zenger Hall",
+                "roomID": "4839818"
+                }
+    
+    
+            ]
+            },
+        {
+            "propertyName": "Indian Quad",
+            "pid": "indian",
+            "rooms": [
+                {
+                "roomName": "Adirondack Hall",
+                "roomID": "4839854"
+                },
+                {
+                "roomName": "Cayuga Hall",
+                "roomID": "4839851"
+                },
+                {
+                "roomName": "Mahican Hall",
+                "roomID": "4839852"
+                },
+                {
+                "roomName": "Mohawk Tower",
+                "roomID": "4839850"
+                },
+                {
+                "roomName": "Montauk Hall",
+                "roomID": "4839848"
+                },
+                {
+                "roomName": "Oneida Hall",
+                "roomID": "483981"
+                },
+                {
+                "roomName": "Onondaga Hall",
+                "roomID": "4839849"
+                },
+                {
+                "roomName": "Seneca Hall",
+                "roomID": "seneca",
+                "innerRooms": [
+                    {
+                    "roomName": "First Floor",
+                    "roomID": "483988"
+                    },
+                    {
+                    "roomName": "Second Floor",
+                    "roomID": "4839864"
+                    },
+                    {
+                    "roomName": "Third Floor",
+                    "roomID": "4839865"
+                    }
+                ]
+                },
+                {
+                "roomName": "Tuscarora Hall",
+                "roomID": "tuscarora",
+                "innerRooms": [
+                    {
+                    "roomName": "Basement",
+                    "roomID": "4839847"
+                    },
+                    {
+                    "roomName": "First Floor",
+                    "roomID": "4839828"
+                    },
+                    {
+                    "roomName": "Second Floor",
+                    "roomID": "4839829"
+                    },
+                    {
+                    "roomName": "Third Floor",
+                    "roomID": "4839826"
+                    }
+                ]
+                }
+    
+    
+            ]
+            },
+            {
+                "propertyName": "Dutch Quad",
+                "pid": "dutch",
+                "rooms": [
+                    {
+                    "roomName": "Beverwyck Hall",
+                    "roomID": "4839819"
+                    },
+                    {
+                    "roomName": "Bleecker Hall",
+                    "roomID": "44839859"
+                    },
+                    {
+                    "roomName": "Ryckman Hall",
+                    "roomID": "4839862"
+                    },
+                    {
+                    "roomName": "Schuyler Hall",
+                    "roomID": "4839860"
+                    },
+                    {
+                    "roomName": "Stuyvesant Tower",
+                    "roomID": "4839861"
+                    },
+                    {
+                    "roomName": "Ten Broek Hall",
+                    "roomID": "tenbroek",
+                    "innerRooms": [
+                        {
+                        "roomName": "Basement",
+                        "roomID": "4839837"
+                        },
+                        {
+                        "roomName": "First Floor",
+                        "roomID": "4839869"
+                        }
+                    ]
+                    },
+                    {
+                    "roomName": "Ten Eyck Hall",
+                    "roomID": "4839857"
+                    },
+                    {
+                    "roomName": "Van Cortland Hall",
+                    "roomID": "4839817"
+                    },
+                    {
+                    "roomName": "Van Rensselaer Hall",
+                    "roomID": "4839856"
+                    }
+        
+        
+                ]
+                },
+                {
+                    "propertyName": "Alumni Quad",
+                    "pid": "alumni",
+                    "rooms": [
+                        {
+                        "roomName": "Alden Hall",
+                        "roomID": "alden",
+                        "innerRooms": [
+                            {
+                            "roomName": "East",
+                            "roomID": "483989"
+                            },
+                            {
+                            "roomName": "West",
+                            "roomID": "4839810"
+                            }
+                        ]
+                        },
+                        {
+                        "roomName": "Pierce Hall",
+                        "roomID": "4839830"
+                        },
+                        {
+                        "roomName": "Sayles Hall",
+                        "roomID": "4839862"
+                        },
+                        {
+                        "roomName": "Waterbury Hall",
+                        "roomID": "waterbury",
+                        "innerRooms": [
+                            {
+                            "roomName": "East",
+                            "roomID": "4839811"
+                            },
+                            {
+                            "roomName": "West",
+                            "roomID": "4839813"
+                            }
+                        ]
+                        }
+            
+            
+                    ]
+                    },
+                    {
+                        "propertyName": "Freedom Apartments",
+                        "pid": "freedom",
+                        "rooms": [
+                            {
+                            "roomName": "Building A",
+                            "roomID": "4839858"
+                            },
+                            {
+                            "roomName": "Building B",
+                            "roomID": "4839855"
+                            },
+                            {
+                            "roomName": "Building C",
+                            "roomID": "4839814"
+                            },
+                            {
+                            "roomName": "Building D",
+                            "roomID": "4839853"
+                            }
+                
+                
+                        ]
+                        },
+                        {
+                            "propertyName": "Liberty Terrace",
+                            "pid": "liberty",
+                            "rooms": [
+                                {
+                                "roomName": "North",
+                                "roomID": "ltnorth",
+                                "innerRooms": [
+                                    {
+                                    "roomName": "First Floor",
+                                    "roomID": "4839821"
+                                    },
+                                    {
+                                    "roomName": "Second Floor",
+                                    "roomID": "4839820"
+                                    },
+                                    {
+                                    "roomName": "Third Floor",
+                                    "roomID": "4839836"
+                                    },
+                                    {
+                                    "roomName": "Fourth Floor",
+                                    "roomID": "4839838"
+                                    },
+                                    {
+                                    "roomName": "Fifth Floor",
+                                    "roomID": "4839834"
+                                    }
+                                ]
+                                },
+                                {
+                                "roomName": "South",
+                                "roomID": "ltsouth",
+                                "innerRooms": [
+                                    {
+                                    "roomName": "First Floor",
+                                    "roomID": "4839822"
+                                    },
+                                    {
+                                    "roomName": "Second Floor",
+                                    "roomID": "4839831"
+                                    },
+                                    {
+                                    "roomName": "Third Floor",
+                                    "roomID": "4839832"
+                                    },
+                                    {
+                                    "roomName": "Fourth Floor",
+                                    "roomID": "4839833"
+                                    },
+                                    {
+                                    "roomName": "Fifth Floor",
+                                    "roomID": "4839835"
+                                    }
+                                ]
+                                }
+                    
+                    
+                            ]
+                            }
+
+    ]
+
+}
