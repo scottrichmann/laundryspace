@@ -524,8 +524,18 @@ $(document).ready(function() {
 
             //append the row
             datapoint.appendChild(row);
-            $('.washers-title').html("<h2 class='washers-title'>" + availableCounter + " Washers available <i class='fas fa-tint'></i></h2><div class='btn-group' role='group' aria-label='selector'><button type='button' class='btn btn-info active' id='showAllWashers'>Show All</button><button type='button' class='btn btn-info' id='showAvailableWashers'>Available</button><button type='button' class='btn btn-info' id='showInUseWashers'>In Use</button><button type='button' class='btn btn-info' id='showOutOfOrderWashers'>Out Of Order</button></div>");
-            $('.dryers-title').html("<h2 class='dryers-title'>" + dryAvailableCounter + " Dryers available <i class='fas fa-tshirt'></i></h2><div class='btn-group' role='group' aria-label='selector'><button type='button' class='btn btn-info active' id='showAllDryers'>Show All</button><button type='button' class='btn btn-info' id='showAvailableDryers'>Available</button><button type='button' class='btn btn-info' id='showInUseDryers'>In Use</button><button type='button' class='btn btn-info' id='showOutOfOrderDryers'>Out Of Order</button></div>");
+
+            //update count
+            if (availableCounter == 1) {
+                $('.washers-title').html("<h2 class='washers-title'>" + availableCounter + " Washer available <i class='fas fa-tint'></i></h2><div class='btn-group' role='group' aria-label='selector'><button type='button' class='btn btn-info active' id='showAllWashers'>Show All</button><button type='button' class='btn btn-info' id='showAvailableWashers'>Available</button><button type='button' class='btn btn-info' id='showInUseWashers'>In Use</button><button type='button' class='btn btn-info' id='showOutOfOrderWashers'>Out Of Order</button></div>");
+            }else {
+                $('.washers-title').html("<h2 class='washers-title'>" + availableCounter + " Washers available <i class='fas fa-tint'></i></h2><div class='btn-group' role='group' aria-label='selector'><button type='button' class='btn btn-info active' id='showAllWashers'>Show All</button><button type='button' class='btn btn-info' id='showAvailableWashers'>Available</button><button type='button' class='btn btn-info' id='showInUseWashers'>In Use</button><button type='button' class='btn btn-info' id='showOutOfOrderWashers'>Out Of Order</button></div>"); 
+            };
+            if (dryAvailableCounter == 1) {
+                $('.dryers-title').html("<h2 class='dryers-title'>" + dryAvailableCounter + " Dryer available <i class='fas fa-tshirt'></i></h2><div class='btn-group' role='group' aria-label='selector'><button type='button' class='btn btn-info active' id='showAllDryers'>Show All</button><button type='button' class='btn btn-info' id='showAvailableDryers'>Available</button><button type='button' class='btn btn-info' id='showInUseDryers'>In Use</button><button type='button' class='btn btn-info' id='showOutOfOrderDryers'>Out Of Order</button></div>");
+            }else {
+                $('.dryers-title').html("<h2 class='dryers-title'>" + dryAvailableCounter + " Dryers available <i class='fas fa-tshirt'></i></h2><div class='btn-group' role='group' aria-label='selector'><button type='button' class='btn btn-info active' id='showAllDryers'>Show All</button><button type='button' class='btn btn-info' id='showAvailableDryers'>Available</button><button type='button' class='btn btn-info' id='showInUseDryers'>In Use</button><button type='button' class='btn btn-info' id='showOutOfOrderDryers'>Out Of Order</button></div>"); 
+            }
 
             //create listeners for the column toggle on mobile
             $('#showWashersColumn').on('click', function() {
