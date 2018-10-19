@@ -735,6 +735,19 @@ $(document).ready(function() {
                 $('#locationSelect').html("View machine status below, or select another location.");
             }
 
+            startRefreshTimer();
+
+            function startRefreshTimer() {
+                var time = document.createElement('p');
+                time.innerHTML = "<center><em>Data refreshes every 60 seconds</em></center>";
+
+                $('#spaceRight').append(time);
+
+                setTimeout(function () { 
+                    buildRoom(id);
+                 }, 60000);
+
+            }
 
         });
 
