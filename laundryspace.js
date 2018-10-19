@@ -464,6 +464,8 @@ $(document).ready(function() {
                         drycolumn.appendChild(drycard);   
                         
                         countInUse++;
+
+
                     }
                     else if (remainder.lastIndexOf('extended cycle') > -1) {
                         var innerRow = document.createElement('div');
@@ -511,7 +513,7 @@ $(document).ready(function() {
                     };
                 };
 
-
+            
 
 
 
@@ -524,6 +526,45 @@ $(document).ready(function() {
 
             //append the row
             datapoint.appendChild(row);
+
+            //listener for notify me
+            $('.card-link').on('click', function(e) {
+                var machineName = $(e.currentTarget).attr('machinename');
+                var unixTimeEnd = $(e.currentTarget).attr('remain');
+                var readableTime = $(e.currentTarget).attr('readable');
+
+                //remove old modal if existing
+                $('#emailModal').remove();
+
+                //create the modal
+                var modal = document.createElement('div');
+                modal.classList.add('modal');
+                modal.setAttribute('tabindex', '-1');
+                modal.setAttribute('role', 'dialog');
+                modal.setAttribute('id','emailModal');
+                modal.innerHTML = "<div class='modal-dialog' role='document'><div class='modal-content'><div class='modal-header'><h5 class='modal-title'>Notify via email</h5><button type='button' class='close' data-dismiss='modal' aria-label='Close' id='removeModal'><span aria-hidden='true'>&times;</span></button></div><div class='modal-body'><p>" + machineName + " will finish its cycle at <strong>" + readableTime +".</strong> Enter your email below to receive a notification.</p><input class='form-control form-control-lg' type='text' id='email' placeholder='Email'></div><div class='modal-footer'><button type='button' class='btn btn-primary' id='"+unixTimeEnd+"'>Notify Me</button><button type='button' class='btn btn-secondary' data-dismiss='modal' id='removeModal'>Close</button></div></div></div>";
+                
+                //add it to row
+                row.appendChild(modal);
+
+                //call the modal
+                $('#emailModal').modal();
+
+                //listener for Notify Me inside modal
+                $('#'+unixTimeEnd).on('click', function(){
+                    //call the email function
+                    sendEmail(machineName,unixTimeEnd,readableTime);
+                    $('#emailModal').modal('hide');
+                    
+                });
+
+                //listener for Close modal button
+                $('#removeModal').on('click', function(){
+                    //remove item
+                    $('#emailModal').remove();
+                });
+
+            })
 
             //update count
             if (availableCounter == 1) {
@@ -648,41 +689,7 @@ $(document).ready(function() {
                 $('.dryer-out-of-order').show()
             });
 
-            //listener for notify me
-            $('#notifyMe').on('click', function(e) {
-                var machineName = $(e.target).attr('machineName');
-                var unixTimeEnd = $(e.target).attr('remain');
-                var readableTime = $(e.target).attr('readable');
-
-                //create the modal
-                var modal = document.createElement('div');
-                modal.classList.add('modal');
-                modal.setAttribute('tabindex', '-1');
-                modal.setAttribute('role', 'dialog');
-                modal.setAttribute('id','emailModal');
-                modal.innerHTML = "<div class='modal-dialog' role='document'><div class='modal-content'><div class='modal-header'><h5 class='modal-title'>Notify via email</h5><button type='button' class='close' data-dismiss='modal' aria-label='Close' id='removeModal'><span aria-hidden='true'>&times;</span></button></div><div class='modal-body'><p>" + machineName + " will finish its cycle at <strong>" + readableTime +".</strong> Enter your email below to receive a notification.</p><input class='form-control form-control-lg' type='text' id='email' placeholder='Email'></div><div class='modal-footer'><button type='button' class='btn btn-primary' id='"+unixTimeEnd+"'>Notify Me</button><button type='button' class='btn btn-secondary' data-dismiss='modal' id='removeModal'>Close</button></div></div></div>";
-                
-                //add it to row
-                row.appendChild(modal);
-
-                //call the modal
-                $('#emailModal').modal();
-
-                //listener for Notify Me inside modal
-                $('#'+unixTimeEnd).on('click', function(){
-                    //call the email function
-                    sendEmail(machineName,unixTimeEnd,readableTime);
-                    $('#emailModal').modal('hide');
-                    
-                });
-
-                //listener for Close modal button
-                $('#removeModal').on('click', function(){
-                    //remove item
-                    $('#emailModal').remove();
-                });
-
-            })
+        
 
             //build canvases after page ready
             buildCanvases();
