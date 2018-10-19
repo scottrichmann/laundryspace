@@ -733,6 +733,9 @@ $(document).ready(function() {
             function rewriteJumbo() {
                 $('#spaceTitle').html($('#'+$('.top-select').val()).html()  + " Machines");
                 $('#locationSelect').html("View machine status below, or select another location.");
+
+                $('#currentSpace').html($('.top-select').val().html()+$('child-select').val().html());
+
             }
 
             startRefreshTimer();
@@ -779,7 +782,6 @@ $(document).ready(function() {
     
 
     };
-
 
 
 
