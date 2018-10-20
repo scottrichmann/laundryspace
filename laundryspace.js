@@ -734,7 +734,7 @@ $(document).ready(function() {
                 $('#spaceTitle').html($('#'+$('.top-select').val()).html()  + " Machines");
                 $('#locationSelect').html("View machine status below, or select another location.");
 
-                $('#currentSpace').html($('.top-select').val().html()+$('child-select').val().html());
+                $('#currentSpace').html($($('.top-select').val()).html()+$($('child-select').val()).html());
 
             }
 
